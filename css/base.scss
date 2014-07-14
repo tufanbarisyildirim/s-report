@@ -1,0 +1,79 @@
+$base-background: #fff;
+$base-color: #333;
+$base-font-size: 16px;
+$base-line-height: 1.4;
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-link-color: #069;
+$base-link-color-hover: $base-link-color;
+
+html {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: $base-font-family;
+  color: $base-color;
+  background: $base-background;
+
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: $base-link-color-hover;
+  text-decoration: underline;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
