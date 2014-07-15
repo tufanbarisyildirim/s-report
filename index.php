@@ -114,8 +114,8 @@
             include "event/dribbble.php";
             include "event/imdb.php";
             include "event/instapaper.php";
-//            include "event/etsy.php";
-//            include "event/github.php";
+            include "event/etsy.php";
+            include "event/github.php";
 //            include "event/ios.php";
 
         endforeach;

@@ -1,43 +1,54 @@
-<?php if ($postTag == 'favorite') {
+<?php if ($Action[0] == 'favorite') {
+
+    $widthActionIcon = $DomainOption[$Action[0]]['sizeWeightIcon'];
+    $heightActionIcon = $DomainOption[$Action[0]]['sizeHeightIcon'];
 
     // Title, EtsyUrl, ImageUrl, Tags, Price, ShopName, ShopUrl, CreatedAt
-
-    $Title = $data["Title"];
-    $EtsyUrl = $data["EtsyUrl"];
-    $ImageUrl = $data["ImageUrl"];
-    $ShopName = $data["ShopName"];
+    $Title = $Data["Title"];
+    $EtsyUrl = $Data["EtsyUrl"];
+    $ImageUrl = $Data["ImageUrl"];
+    $ShopName = $Data["ShopName"];
 
     ?>
 
-    <article class="Event <?php echo 'Event--' . $theme; ?>">
 
+    <article class="Event <?php echo 'Event--' . $Domain; ?>">
 
         <header class="Event-header">
 
-            <i class="Event-header__icon">
-                <svg class="icon <?php echo 'icon--' . $theme; ?>" viewBox="0 0 <?php echo $sizeWeightIcon; ?> <?php echo $sizeHeightIcon; ?>">
-                    <use xlink:href="#icon-<?php echo $theme; ?>"></use>
-                </svg>
-            </i>
+            <span class="Event-header__icon">
+                <i class="icon <?php echo 'icon--' . $Domain; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthDomainIcon; ?> <?php echo $heightDomainIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Domain; ?>"></use>
+                    </svg>
+                </i>
+                <i class="icon <?php echo 'icon--' . $Action[0]; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthActionIcon; ?> <?php echo $heightActionIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Action[0]; ?>"></use>
+                    </svg>
+                </i>
+            </span>
 
-            <a href="<?php echo $EtsyUrl ?>" target="_blank">
-
-                <time title="<?php the_time('j F Y - G:i') ?>" datetime="<?php the_time('Y-m-dTG:i:s') ?>"><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
-
-                <strong><?php echo $ShopName ?></strong> dükkanından bir ürünü favori listesine ekledi;
-
+            <a class="Event-header__time" href="<?php echo $EtsyUrl ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
+                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
             </a>
-        </header>
 
+            <p class="Event-header__text">
+                <strong><?php echo $ShopName ?></strong> dükkanından bir ürünü favori listesine ekledi;
+            </p>
+
+        </header>
 
         <div class="Event-body">
 
-            <p><?php echo $Title ?></p>
-
-            <img src="<?php echo $ImageUrl ?>" alt="<?php echo $Title ?>"/>
+            <figure>
+                <img src="<?php echo $ImageUrl ?>" alt="<?php echo $Title ?>"/>
+                <figcaption><?php echo $Title ?></figcaption>
+            </figure>
 
         </div>
 
-
     </article>
+
+
 <?php } ?>

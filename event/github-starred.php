@@ -1,40 +1,51 @@
-<?php if ($postTag == 'starred') {
+<?php if ($Action[0] == 'starred') {
+
+    $Action[0] = 'favorite';
+    $widthActionIcon = $DomainOption[$Action[0]]['sizeWeightIcon'];
+    $heightActionIcon = $DomainOption[$Action[0]]['sizeHeightIcon'];
 
     // EntryTitle, EntryUrl, EntryAuthor, EntryContent, EntryImageUrl, EntryPublished, FeedTitle, FeedUrl
-
-    $EntryTitle = $data["EntryTitle"];
-    $EntryUrl = $data["EntryUrl"];
-    $EntryAuthor = $data["EntryAuthor"];
+    $EntryTitle = $Data["EntryTitle"];
+    $EntryUrl = $Data["EntryUrl"];
+    $EntryAuthor = $Data["EntryAuthor"];
 
     ?>
 
-    <article class="Event <?php echo 'Event--' . $theme; ?>">
 
+    <article class="Event <?php echo 'Event--' . $Domain; ?>">
 
         <header class="Event-header">
 
-            <i class="Event-header__icon">
-                <svg class="icon <?php echo 'icon--' . $theme; ?>" viewBox="0 0 <?php echo $sizeWeightIcon; ?> <?php echo $sizeHeightIcon; ?>">
-                    <use xlink:href="#icon-<?php echo $theme; ?>"></use>
-                </svg>
-            </i>
+            <span class="Event-header__icon">
+                <i class="icon <?php echo 'icon--' . $Domain; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthDomainIcon; ?> <?php echo $heightDomainIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Domain; ?>"></use>
+                    </svg>
+                </i>
+                <i class="icon <?php echo 'icon--' . $Action[0]; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthActionIcon; ?> <?php echo $heightActionIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Action[0]; ?>"></use>
+                    </svg>
+                </i>
+            </span>
 
-            <a href="<?php echo $EntryUrl ?>" target="_blank">
-
-                <time title="<?php the_time('j F Y - G:i') ?>" datetime="<?php the_time('Y-m-dTG:i:s') ?>"><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
-
-                favori listesine yeni bir repo ekledi;
-
+            <a class="Event-header__time" href="<?php echo $EntryUrl ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
+                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
             </a>
+
+            <p class="Event-header__text">
+                <strong><?php echo $EntryAuthor ?></strong>in reposunu favori listesine ekledi;
+            </p>
+
         </header>
 
-
-        <div class="Event-body">
+        <div class="Event-body Event-body--text">
 
             <p><?php echo $EntryTitle ?></p>
 
         </div>
 
-
     </article>
+
+
 <?php } ?>
