@@ -1,41 +1,51 @@
-<?php if ($postTag == 'like') {
+<?php if ($Action[0] == 'like') {
+
+    $widthActionIcon = $DomainOption[$Action[0]]['sizeWeightIcon'];
+    $heightActionIcon = $DomainOption[$Action[0]]['sizeHeightIcon'];
 
     // Title, Caption, Url, OwnerName, OwnerUrl, EmbedCode, UploadedAt, LikedAt
-
-    $Title = $data["Title"];
-    $OwnerName = $data["OwnerName"];
-    $Url = $data["Url"];
-    $EmbedCode = $data["EmbedCode"];
+    $Title = $Data["Title"];
+    $OwnerName = $Data["OwnerName"];
+    $Url = $Data["Url"];
+    $EmbedCode = $Data["EmbedCode"];
 
     ?>
 
-    <article class="Event <?php echo 'Event--' . $theme; ?>">
 
+    <article class="Event <?php echo 'Event--' . $Domain; ?>">
 
         <header class="Event-header">
 
-            <i class="Event-header__icon">
-                <svg class="icon <?php echo 'icon--' . $theme; ?>" viewBox="0 0 <?php echo $sizeWeightIcon; ?> <?php echo $sizeHeightIcon; ?>">
-                    <use xlink:href="#icon-<?php echo $theme; ?>"></use>
-                </svg>
-            </i>
+            <span class="Event-header__icon">
+                <i class="icon <?php echo 'icon--' . $Domain; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthDomainIcon; ?> <?php echo $heightDomainIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Domain; ?>"></use>
+                    </svg>
+                </i>
+                <i class="icon <?php echo 'icon--' . $Action[0]; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthActionIcon; ?> <?php echo $heightActionIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Action[0]; ?>"></use>
+                    </svg>
+                </i>
+            </span>
 
-            <a href="<?php echo $Url ?>" target="_blank">
-
-                <time title="<?php the_time('j F Y - G:i') ?>" datetime="<?php the_time('Y-m-dTG:i:s') ?>"><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
-
-                <strong><?php echo $OwnerName ?></strong>'in videosunu beğendi;
-
+            <a class="Event-header__time" href="<?php echo $Url ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
+                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
             </a>
+
+            <p class="Event-header__text">
+                <strong><?php echo $OwnerName ?></strong>'in videosunu beğendi;
+            </p>
+
         </header>
 
-
-        <div class="Event-body">
+        <div class="Event-body FlexEmbed">
 
             <?php echo $EmbedCode ?>
 
         </div>
 
-
     </article>
+
+
 <?php } ?>

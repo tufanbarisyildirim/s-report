@@ -1,0 +1,47 @@
+$border-Event-header__icon: 6px;
+$size-Event-header__icon: 34px;
+$size-Event-header__icon-svg: 20px;
+//
+$icon-bg-colors: facebook #3b5998, twitter #55acee, foursquare #0072b1, github #333, youtube #e52d27, typekit #98ce1e, vimeo #1ab7ea, tumblr #35465c, imdb #f5de50, spotify #7ab800, soundcloud #f80, pocket #d3505a, linkedin #0976b4, rss #f26522, instagram #3f729b, instapaper #000, google-plus #dd4b39, px500 #00aeef, behance #1769ff, disqus #2e9fff, dribbble #ea4c89, etsy #d5641c, ios #333;
+$icon-colors: favorite #FEC10D, add #64BB58, like #EA6895;
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  //width: $size-Event-header__icon + ($border-Event-header__icon * 2);
+  width: $size-Event-header__icon;
+  height: $size-Event-header__icon;
+  border-radius: 100%;
+}
+
+.icon-svg {
+  fill: #ccc;
+  display: inline-block;
+  vertical-align: middle;
+  width: $size-Event-header__icon-svg;
+  height: $size-Event-header__icon-svg;
+  margin-top: ($size-Event-header__icon - $size-Event-header__icon-svg) / 2;
+}
+
+@each $bg in $icon-bg-colors {
+  .icon {
+    &#{--#{nth($bg, 1)}} {
+      background-color: #{nth($bg, 2)};
+      .icon-svg {
+        fill: $base-background;
+      }
+    }
+  }
+}
+
+@each $fill in $icon-colors {
+  .icon {
+    &#{--#{nth($fill, 1)}} {
+      background-color: $color-gray;
+      .icon-svg {
+        fill: #{nth($fill, 2)};
+      }
+    }
+  }
+}

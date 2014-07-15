@@ -1,4 +1,4 @@
-<?php if ($theme == 'youtube') {
+<?php if ($Domain == 'youtube') {
 
     include "youtube-favorite.php";
 

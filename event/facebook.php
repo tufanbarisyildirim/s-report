@@ -1,4 +1,4 @@
-<?php if ($theme == 'facebook') {
+<?php if ($Domain == 'facebook') {
 
     include "facebook-status.php";
 

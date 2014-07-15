@@ -1,8 +1,6 @@
-<?php if ($theme == 'instagram') {
+<?php if ($Domain == 'instagram') {
 
-    include "instagram-photoShare.php";
-    include "instagram-photoLike.php";
-    include "instagram-videoShare.php";
-    include "instagram-videoLike.php";
+    include "instagram-share.php";
+    include "instagram-like.php";
 
 } ?>

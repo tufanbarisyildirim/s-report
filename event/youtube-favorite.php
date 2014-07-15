@@ -1,45 +1,51 @@
-<?php if ($postTag == 'favorite') {
+<?php if ($Action[0] == 'favorite') {
 
-    // favorite
+    $widthActionIcon = $DomainOption[$Action[0]]['sizeWeightIcon'];
+    $heightActionIcon = $DomainOption[$Action[0]]['sizeHeightIcon'];
+
     // Title, Description, Url, AuthorName, EmbedCode
-
-    $Title = $data["Title"];
-    $AuthorName = $data["AuthorName"];
-    $Url = $data["Url"];
-    $EmbedCode = $data["EmbedCode"];
+    $Title = $Data["Title"];
+    $AuthorName = $Data["AuthorName"];
+    $Url = $Data["Url"];
+    $EmbedCode = $Data["EmbedCode"];
 
     ?>
 
-    <article class="Event <?php echo 'Event--' . $theme; ?>">
 
+    <article class="Event <?php echo 'Event--' . $Domain; ?>">
 
         <header class="Event-header">
 
-            <i class="Event-header__icon">
-                <svg class="icon <?php echo 'icon--' . $theme; ?>" viewBox="0 0 <?php echo $sizeWeightIcon; ?> <?php echo $sizeHeightIcon; ?>">
-                    <use xlink:href="#icon-<?php echo $theme; ?>"></use>
-                </svg>
-            </i>
+            <span class="Event-header__icon">
+                <i class="icon <?php echo 'icon--' . $Domain; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthDomainIcon; ?> <?php echo $heightDomainIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Domain; ?>"></use>
+                    </svg>
+                </i>
+                <i class="icon <?php echo 'icon--' . $Action[0]; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthActionIcon; ?> <?php echo $heightActionIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Action[0]; ?>"></use>
+                    </svg>
+                </i>
+            </span>
 
-            <a href="<?php echo $Url ?>" target="_blank">
-
-                <time title="<?php the_time('j F Y - G:i') ?>" datetime="<?php the_time('Y-m-dTG:i:s') ?>"><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
-                <strong><?php echo $AuthorName ?></strong>'in videosunu favorilere ekledi;
-
+            <a class="Event-header__time" href="<?php echo $Url ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
+                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
             </a>
+
+            <p class="Event-header__text">
+                <strong><?php echo $AuthorName ?></strong>'in videosunu favorilere ekledi;
+            </p>
+
         </header>
 
-
-        <div class="Event-body">
-
-            <!--p><?php //echo $Title ?></p-->
+        <div class="Event-body FlexEmbed">
 
             <?php echo $EmbedCode ?>
 
-            <!--iframe width="100%" height="400" src="//www.youtube.com/embed/K3cx6vHISd8" frameborder="0" allowfullscreen></iframe-->
-
         </div>
 
-
     </article>
+
+
 <?php } ?>

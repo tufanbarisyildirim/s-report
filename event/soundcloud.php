@@ -1,4 +1,4 @@
-<?php if ($theme == 'soundcloud') {
+<?php if ($Domain == 'soundcloud') {
 
     include "soundcloud-favorite.php";
 

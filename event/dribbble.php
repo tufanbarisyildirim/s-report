@@ -1,4 +1,4 @@
-<?php if ($theme == 'dribbble') {
+<?php if ($Domain == 'dribbble') {
 
     include "dribbble-like.php";
 

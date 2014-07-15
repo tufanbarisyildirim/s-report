@@ -1,4 +1,4 @@
-<?php if ($theme == 'vimeo') {
+<?php if ($Domain == 'vimeo') {
 
     include "vimeo-like.php";
 

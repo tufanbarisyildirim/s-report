@@ -1,40 +1,51 @@
-<?php if ($postTag == 'tweet') {
+<?php if ($Action[0] == 'tweet') {
+
+    $Action[0] = 'add';
+    $widthActionIcon = $DomainOption[$Action[0]]['sizeWeightIcon'];
+    $heightActionIcon = $DomainOption[$Action[0]]['sizeHeightIcon'];
 
     // Text, UserName, LinkToTweet, CreatedAt, TweetEmbedCode
-
-    $Text = $data["Text"];
-    $UserName = $data["UserName"];
-    $LinkToTweet = $data["LinkToTweet"];
-    $TweetEmbedCode = $data["TweetEmbedCode"];
+    $Text = $Data["Text"];
+    $LinkToTweet = $Data["LinkToTweet"];
+    $TweetEmbedCode = $Data["TweetEmbedCode"];
 
     ?>
 
-    <article class="Event <?php echo 'Event--' . $theme; ?>">
 
+    <article class="Event <?php echo 'Event--' . $Domain; ?>">
 
         <header class="Event-header">
 
-            <i class="Event-header__icon">
-                <svg class="icon <?php echo 'icon--' . $theme; ?>" viewBox="0 0 <?php echo $sizeWeightIcon; ?> <?php echo $sizeHeightIcon; ?>">
-                    <use xlink:href="#icon-<?php echo $theme; ?>"></use>
-                </svg>
-            </i>
+            <span class="Event-header__icon">
+                <i class="icon <?php echo 'icon--' . $Domain; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthDomainIcon; ?> <?php echo $heightDomainIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Domain; ?>"></use>
+                    </svg>
+                </i>
+                <i class="icon <?php echo 'icon--' . $Action[0]; ?>">
+                    <svg class="icon-svg" viewBox="0 0 <?php echo $widthActionIcon; ?> <?php echo $heightActionIcon; ?>">
+                        <use xlink:href="#icon--<?php echo $Action[0]; ?>"></use>
+                    </svg>
+                </i>
+            </span>
 
-            <a href="<?php echo $LinkToTweet ?>" target="_blank">
-
-                <time title="<?php the_time('j F Y - G:i') ?>" datetime="<?php the_time('Y-m-dTG:i:s') ?>"><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
-                tweet yazdı;
-
+            <a class="Event-header__time" href="<?php echo $LinkToTweet ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
+                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
             </a>
-        </header>
 
+            <p class="Event-header__text">
+                tweet yazdi;
+            </p>
+
+        </header>
 
         <div class="Event-body">
 
-            <p><?php echo $Text ?></p>
+            <?php echo $TweetEmbedCode; ?>
 
         </div>
 
-
     </article>
+
+
 <?php } ?>

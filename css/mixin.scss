@@ -1,0 +1,26 @@
+@mixin font($w: 'book') {
+  //
+  font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B';
+  font-style: normal;
+  //
+  @if $w == 'light' {
+    font-weight: 300;
+  } @else if $w == 'book' {
+    font-weight: 400;
+  } @else if $w == 'bold' {
+    font-weight: 700;
+  }
+}
+
+@mixin gradient($from, $to) {
+  background-color: $from;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+}
+
+
+.transition {
+  transition: .23s;
+}

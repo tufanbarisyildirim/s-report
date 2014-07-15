@@ -1,4 +1,4 @@
-<?php if ($theme == 'foursquare') {
+<?php if ($Domain == 'foursquare') {
 
     include "foursquare-checkin.php";
 
