@@ -72,7 +72,7 @@
         );
 
 
-        $args = array('posts_per_page' => 50);
+        $args = array('posts_per_page' => 20);
         $myposts = get_posts($args);
 
         // Post
@@ -116,7 +116,7 @@
             include "event/instapaper.php";
             include "event/etsy.php";
             include "event/github.php";
-//            include "event/ios.php";
+            include "event/ios.php";
 
         endforeach;
         wp_reset_postdata();?>

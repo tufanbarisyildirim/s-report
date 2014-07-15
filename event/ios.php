@@ -1,4 +1,4 @@
-<?php if ($theme == 'ios') {
+<?php if ($Domain == 'ios') {
 
     include "ios-photo.php";
 
