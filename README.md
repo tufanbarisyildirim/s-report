@@ -10,9 +10,9 @@ We will, of course, build the theme on a website with WordPress installed. I hig
 
 1. You should have WordPress installed.
 
-2. Get the s-report theme from [github](https://github.com/ademilter/s-report) and then activate it.
+2. Get the [s-report theme](https://github.com/ademilter/s-report) from github and then activate it.
 
-3. Complete your membership on [ifttt](http://ifttt.com/).
+3. Sign up for [ifttt](http://ifttt.com/) if you haven't already.
 
 4. [Choose](https://ifttt.com/p/ademilter) the recipes you want to use (You'll be asked for permission before using the recipes).
 
@@ -24,4 +24,4 @@ Each recipe works with different periods. It's usually between 3-8 minutes but y
 ###Notes
 Don't forget to delete the ‘Hello World’ post after the installation of WordPress.
 
-Posts can only be sent by ifttt](http://ifttt.com/), you shouldn't manually post anything.
+Posts can only be sent by [ifttt](http://ifttt.com/), you shouldn't manually post anything.
