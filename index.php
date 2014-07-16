@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <title></title>
+    <title><?php wp_title(); ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
