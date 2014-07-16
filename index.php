@@ -61,10 +61,6 @@
             'wordpress' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
             'youtube' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
 
-            // ceviriler
-            'status' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
-
-
             // olmayanlar
             'etsy' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
             'imdb' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
@@ -72,11 +68,11 @@
         );
 
 
-        $args = array('posts_per_page' => 20);
-        $myposts = get_posts($args);
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array('posts_per_page' => 10, 'paged' => $paged);
+        query_posts($args);
 
-        // Post
-        foreach ($myposts as $post) : setup_postdata($post);
+        if (have_posts()) : while (have_posts()) : the_post();
 
             // Post cat name
             $Cat = get_the_category();
@@ -110,6 +106,7 @@
             include "event/twitter.php";
             include "event/soundcloud.php";
             include "event/vimeo.php";
+            include "event/tumblr.php";
             include "event/youtube.php";
             include "event/dribbble.php";
             include "event/imdb.php";
@@ -117,9 +114,17 @@
             include "event/etsy.php";
             include "event/github.php";
             include "event/ios.php";
+            include "event/calendar.php";
 
-        endforeach;
-        wp_reset_postdata();?>
+        endwhile; ?>
+
+            <?php next_posts_link('Older posts'); ?>
+            <?php previous_posts_link('Newer posts'); ?>
+
+        <?php
+        endif;
+
+        ?>
 
 
     </div>

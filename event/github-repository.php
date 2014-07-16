@@ -41,11 +41,9 @@
 
         <div class="Event-body Event-body--text">
 
-            <p><?php echo $RepositoryName ?></p>
+            <p><strong><?php echo $RepositoryName ?></strong></p>
 
-            <p>
-                <small><?php echo $RepositoryDescription ?></small>
-            </p>
+            <p class="small"><?php echo $RepositoryDescription ?></small></p>
 
         </div>
 

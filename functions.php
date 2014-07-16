@@ -1,12 +1,11 @@
 <?php
 
-
-
-function tokenText($str)
-{
-    preg_match_all("/\\$(\w+)\:(.*?)\;/uis", $str, $matches);
-    $object = array_combine($matches[1], $matches[2]);
+function tokenText($str) {
+    $matches = preg_split("/\;\s*\\$/uism", $str);
+    $object = array();
+    foreach ($matches as $match) {
+        preg_match("/\\$?(\w+)\:(.*)/uism", trim($match), $_matches);
+        $object[$_matches[1]] = rtrim($_matches[2], ";");
+    }
     return $object;
-
-    // thx @fkadev
 }
