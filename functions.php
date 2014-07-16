@@ -1,6 +1,9 @@
 <?php
 
 function tokenText($str) {
+
+    // thx fatih (github.com/f)
+
     $matches = preg_split("/\;\s*\\$/uism", $str);
     $object = array();
     foreach ($matches as $match) {
