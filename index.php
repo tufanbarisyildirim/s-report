@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css"/>
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
     <?php wp_head(); ?>
+
+    <?php include_once("analyticstracking.php") ?>
 
 </head>
 <body <?php body_class(); ?>>
