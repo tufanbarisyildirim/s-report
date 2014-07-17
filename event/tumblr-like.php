@@ -29,11 +29,11 @@
                 </span>
 
             <a class="Event-header__time" href="<?php echo $Url ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
-                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
+                <time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time>
             </a>
 
             <p class="Event-header__text">
-                <strong><?php echo $BlogName ?></strong>'in paylaşımını beğendi;
+                <?php printf( __( 'Liked <strong>%s</strong>\'s post', 's-report' ), $BlogName); ?>
             </p>
 
         </header>

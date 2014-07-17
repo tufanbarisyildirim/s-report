@@ -32,18 +32,18 @@
             </span>
 
             <a class="Event-header__time" href="<?php echo $TrackUrl ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
-                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
+                <time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time>
             </a>
 
             <p class="Event-header__text">
-                <strong><?php echo $Username ?></strong>'in muzigini favorilere ekledi;
+                <?php printf( __( 'Liked <strong>%s</strong>\'s track', 's-report' ), $Username ); ?>
             </p>
 
         </header>
 
         <div class="Event-body FlexEmbed">
 
-            <?php echo $EmbedCode ?>
+            <?php echo $EmbedCode; ?>
 
         </div>
 
