@@ -8,9 +8,9 @@
 
         // Caption, Url, SourceUrl, CreatedAt, EmbedCode
 
-        $Caption = $data["Caption"];
-        $Url = $data["Url"];
-        $SourceUrl = $data["SourceUrl"];
+        $Caption = $Data["Caption"];
+        $Url = $Data["Url"];
+        $SourceUrl = $Data["SourceUrl"];
 
         ?>
 
@@ -61,9 +61,9 @@
 
         // Caption, URL, VideoSourceURL, ImageThumbnailURL, CreatedAt, EmbedCode
 
-        $Caption = $data["Caption"];
-        $URL = $data["URL"];
-        $ImageThumbnailURL = $data["ImageThumbnailURL"];
+        $Caption = $Data["Caption"];
+        $URL = $Data["URL"];
+        $ImageThumbnailURL = $Data["ImageThumbnailURL"];
 
         ?>
 
