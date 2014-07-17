@@ -72,7 +72,7 @@
 
 
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $args = array('posts_per_page' => 10, 'paged' => $paged);
+        $args = array('posts_per_page' => 20, 'paged' => $paged);
         query_posts($args);
 
         if (have_posts()) : while (have_posts()) : the_post();
@@ -116,7 +116,7 @@
             include "event/instapaper.php";
             include "event/etsy.php";
             include "event/github.php";
-            include "event/ios.php";
+            include "event/iphone.php";
             include "event/calendar.php";
 
         endwhile; ?>
