@@ -1,0 +1,43 @@
+<?php
+
+$DomainOption = array(
+    'add' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
+    'apple' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
+    'behance' => array('sizeWeightIcon' => '23', 'sizeHeightIcon' => '20'),
+    'bitbucket' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
+    'codepen' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'dollar' => array('sizeWeightIcon' => '11', 'sizeHeightIcon' => '20'),
+    'dribbble' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'dropbox' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'email' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'facebook' => array('sizeWeightIcon' => '11', 'sizeHeightIcon' => '20'),
+    'foursquare' => array('sizeWeightIcon' => '19', 'sizeHeightIcon' => '20'),
+    'github' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'like' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'instagram' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'linkedin' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'location-arrow' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
+    'reply' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'map-marker' => array('sizeWeightIcon' => '11', 'sizeHeightIcon' => '20'),
+    'iphone' => array('sizeWeightIcon' => '9', 'sizeHeightIcon' => '20'),
+    'pencil' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'retweet' => array('sizeWeightIcon' => '21', 'sizeHeightIcon' => '20'),
+    'rss' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
+    'slack' => array('sizeWeightIcon' => '19', 'sizeHeightIcon' => '20'),
+    'soundcloud' => array('sizeWeightIcon' => '26', 'sizeHeightIcon' => '20'),
+    'spotify' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'favorite' => array('sizeWeightIcon' => '19', 'sizeHeightIcon' => '20'),
+    'thumbs-up' => array('sizeWeightIcon' => '19', 'sizeHeightIcon' => '20'),
+    'tumblr' => array('sizeWeightIcon' => '11', 'sizeHeightIcon' => '20'),
+    'turkish-lira' => array('sizeWeightIcon' => '13', 'sizeHeightIcon' => '20'),
+    'twitter' => array('sizeWeightIcon' => '19', 'sizeHeightIcon' => '20'),
+    'vimeo' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'vine' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'wordpress' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+    'youtube' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
+
+    // olmayanlar
+    'etsy' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
+    'imdb' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20'),
+    'instapaper' => array('sizeWeightIcon' => '16', 'sizeHeightIcon' => '20')
+);
