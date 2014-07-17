@@ -15,7 +15,7 @@
 
     <?php wp_head(); ?>
 
-    <?php include_once("analyticstracking.php") ?>
+    <?php //include_once("analyticstracking.php"); //Add your analytics code in that file and uncomment this line ?>
 
 </head>
 <body <?php body_class(); ?>>
@@ -121,8 +121,8 @@
 
         endwhile; ?>
 
-            <?php next_posts_link('Older posts'); ?>
-            <?php previous_posts_link('Newer posts'); ?>
+            <?php next_posts_link( __('Older posts', 's-report') ); ?>
+            <?php previous_posts_link( __('Newer posts', 's-report') ); ?>
 
         <?php
         endif;

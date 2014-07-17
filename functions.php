@@ -1,5 +1,8 @@
 <?php
 
+// TRANSLATION
+load_theme_textdomain('s-report', get_template_directory() . '/languages');
+
 function tokenText($str) {
 
     // thx fatih (github.com/f)
