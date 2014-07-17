@@ -36,14 +36,14 @@
             </a>
 
             <p class="Event-header__text">
-                <?php printf( __( 'Liked <strong>%s</strong>\'s track', 's-report' ), $EntryAuthor ); ?><strong><?php echo $Username ?></strong>
+                <?php printf( __( 'Liked <strong>%s</strong>\'s track', 's-report' ), $Username ); ?>
             </p>
 
         </header>
 
         <div class="Event-body FlexEmbed">
 
-            <?php echo $EmbedCode ?>
+            <?php echo $EmbedCode; ?>
 
         </div>
 

@@ -30,11 +30,11 @@
                 </span>
 
             <a class="Event-header__time" href="<?php echo $EntryUrl ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
-                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
+                <time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time>
             </a>
 
             <p class="Event-header__text">
-                İzledigi filmler listesine yeni bir film ekledi;
+                <?php _e('Whatched a new movie', 's-report'); ?>
             </p>
 
         </header>
