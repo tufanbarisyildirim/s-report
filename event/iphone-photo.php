@@ -28,11 +28,11 @@
             </span>
 
             <a class="Event-header__time" href="<?php echo $PublicPhotoURL ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
-                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
+                <time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time>
             </a>
 
             <p class="Event-header__text">
-                iPhone 5 ile yeni fotoğraf çekti;
+                <?php _e('Took a photo with the new iPhone 5', 's-report'); ?>
             </p>
 
         </header>

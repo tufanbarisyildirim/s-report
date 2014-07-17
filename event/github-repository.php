@@ -30,11 +30,11 @@
             </span>
 
             <a class="Event-header__time" href="<?php echo $RepositoryURL ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
-                <time><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) ?> önce</time>
+                <time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time>
             </a>
 
             <p class="Event-header__text">
-                yeni repo oluşturdu;
+                <?php _e('Created a new repository', 's-report'); ?>
             </p>
 
         </header>
