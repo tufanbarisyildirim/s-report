@@ -34,7 +34,7 @@
             </a>
 
             <p class="Event-header__text">
-                <?php printf( __( 'Liked <strong>%s</strong>\'s video', 's-report' ), $OwnerName ); ?><strong>
+                <?php printf( __( 'Liked <strong>%s</strong>\'s video', 's-report' ), $OwnerName ); ?>
             </p>
 
         </header>
