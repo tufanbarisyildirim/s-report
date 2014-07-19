@@ -1,5 +1,8 @@
 <?php if ($Action[0] == 'like') {
 
+    $widthActionIcon = $DomainOption[$Action[0]]['sizeWeightIcon'];
+    $heightActionIcon = $DomainOption[$Action[0]]['sizeHeightIcon'];
+
     if ($Action[1] == 'photo') {
 
         // Caption, Url, SourceUrl, Username, CreatedAt, EmbedCode

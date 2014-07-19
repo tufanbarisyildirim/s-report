@@ -9,9 +9,16 @@
 	License: The MIT License (MIT)
 	License URI: https://github.com/ademilter/s-report/blob/master/License
 */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/*  Import
+  ---------------------------------------------*/
 .transition, .Event-header__time, .Event-body figure:after, .Event-body figure figcaption {
   -webkit-transition: .23s;
-  transition: .23s; }
+          transition: .23s; }
 
 /* normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -104,7 +111,7 @@ figure {
 hr {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   height: 0; }
 
 pre {
@@ -155,8 +162,8 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0; }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -195,11 +202,6 @@ table {
 td,
 th {
   padding: 0; }
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
 
 html {
   font-size: 16px;
@@ -414,12 +416,20 @@ ul {
   .icon--like .icon-svg {
     fill: #ea6895; }
 
+/*  Global
+  ---------------------------------------------*/
 * {
   -webkit-tap-highlight-color: transparent; }
 
 img {
   vertical-align: middle; }
 
+small {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300; }
+
+/*  Local
+  ---------------------------------------------*/
 .FlexEmbed {
   position: relative;
   overflow: hidden; }
@@ -442,6 +452,8 @@ img {
   top: 0;
   width: 100%; }
 
+/*  Time-line
+  ---------------------------------------------*/
 html, body {
   height: 100%; }
 
@@ -474,13 +486,13 @@ html, body {
       position: absolute;
       top: 50%;
       -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
       left: -101px;
       font-size: 0; }
       .Event-header__icon .icon {
         -webkit-box-shadow: 0 0 0 6px white;
-        box-shadow: 0 0 0 6px white; }
+                box-shadow: 0 0 0 6px white; }
         .Event-header__icon .icon + .icon {
           margin-left: 10px; }
     .Event-header__time {
@@ -493,22 +505,12 @@ html, body {
     opacity: 1; }
   .Event-body {
     margin-top: 12px;
-    font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B';
-    font-style: normal;
-    font-weight: 400;
     font-size: 22px; }
     .Event-body--text {
       padding: 20px;
       background-color: whitesmoke;
       border-radius: 3px; }
-    .Event-body strong {
-      font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B';
-      font-style: normal;
-      font-weight: 700; }
     .Event-body .small {
-      font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B';
-      font-style: normal;
-      font-weight: 300;
       font-size: 15px; }
     .Event-body img {
       display: block;
@@ -548,10 +550,3 @@ html, body {
       .Event-body figure:hover figcaption {
         opacity: 0;
         bottom: 0; }
-
-.tweet-action-button {
-  font-size: 0;
-  text-align: right;
-  margin-top: 20px;
-  border-top: 1px solid #e5e5e5;
-  margin-bottom: -20px; }

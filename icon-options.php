@@ -27,6 +27,7 @@ $DomainOption = array(
     'soundcloud' => array('sizeWeightIcon' => '26', 'sizeHeightIcon' => '20'),
     'spotify' => array('sizeWeightIcon' => '20', 'sizeHeightIcon' => '20'),
     'favorite' => array('sizeWeightIcon' => '19', 'sizeHeightIcon' => '20'),
+    'calendar' => array('sizeWeightIcon' => '19', 'sizeHeightIcon' => '20'),
     'thumbs-up' => array('sizeWeightIcon' => '19', 'sizeHeightIcon' => '20'),
     'tumblr' => array('sizeWeightIcon' => '11', 'sizeHeightIcon' => '20'),
     'turkish-lira' => array('sizeWeightIcon' => '13', 'sizeHeightIcon' => '20'),
