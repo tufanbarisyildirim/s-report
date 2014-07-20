@@ -131,3 +131,11 @@ msgstr ""
 #: ../index.php:125
 msgid "Newer posts"
 msgstr ""
+
+#: ../functions.php:56
+msgid "Loading new posts"
+msgstr ""
+
+#: ../functions.php:57
+msgid "All post loaded!"
+msgstr ""

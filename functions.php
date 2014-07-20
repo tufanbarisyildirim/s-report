@@ -54,7 +54,7 @@ function set_infinite_scrolling()
                 loading: {
                     img: "<?php echo get_template_directory_uri(); ?>/img/loading-bubbles.svg", // https://github.com/jxnblk/loading
                     msgText: "<?php _e('Loading new posts', 's-report'); ?>",
-                    finishedMsg: "All post loaded!",
+                    finishedMsg: "<?php _e('All post loaded!', 's-report'); ?>",
                 },
                 "nextSelector": ".nav a:last-child",
                 "navSelector": ".nav",
