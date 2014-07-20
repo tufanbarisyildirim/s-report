@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: s-report\n"
 "POT-Creation-Date: 2014-07-18 19:41+0200\n"
-"PO-Revision-Date: 2014-07-18 19:42+0200\n"
+"PO-Revision-Date: 2014-07-20 18:59+0200\n"
 "Last-Translator: Ahmet Dereli <ahmetdereli@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -124,10 +124,18 @@ msgstr "<strong>%s</strong>'in videosunu beğendi"
 msgid "Faved <strong>%s</strong>'s video"
 msgstr "<strong>%s</strong>'in videosunu favorilere ekledi"
 
-#: ../index.php:67
+#: ../index.php:68
 msgid "Older posts"
 msgstr "Eski durumlar"
 
-#: ../index.php:68
+#: ../index.php:69
 msgid "Newer posts"
 msgstr "Yeni durumlar"
+
+#: ../functions.php:56
+msgid "Loading new posts"
+msgstr "Durumlar yükleniyor"
+
+#: ../functions.php:57
+msgid "All post loaded!"
+msgstr "Bütün durumlar yüklendi!"
