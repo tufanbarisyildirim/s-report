@@ -550,3 +550,10 @@ html, body {
       .Event-body figure:hover figcaption {
         opacity: 0;
         bottom: 0; }
+
+.twitter-tweet {
+  min-width: auto !important;
+  border-width: 0 !important;
+  width: 100% !important;
+  max-width: auto !important;
+  margin: 0 0 0 -16px !important; }

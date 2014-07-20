@@ -8,8 +8,9 @@
         <?php
 
 
-        $pages = $wp_query->max_num_pages;
-        query_posts($pages);
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array('paged' => $paged);
+        query_posts($args);
 
 
         if (have_posts()) : while (have_posts()) : the_post();
