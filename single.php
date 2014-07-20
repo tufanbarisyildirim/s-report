@@ -55,6 +55,8 @@
 
             ?>
 
+            <?php comments_template(); ?>
+
 
         </div>
     </div>
