@@ -87,6 +87,10 @@ msgstr "Yeni video paylaştı"
 msgid "Added a new article to the reading list"
 msgstr "Okuma listesine yeni bir makale ekledi"
 
+#: ../event/instapaper-like.php:35
+msgid "Liked new article"
+msgstr "Makale beğendi"
+
 #: ../event/iphone-photo.php:35
 msgid "Took a photo with the new iPhone 5"
 msgstr "iPhone 5 ile yeni fotoğraf çekti"

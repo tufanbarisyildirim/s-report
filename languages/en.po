@@ -87,6 +87,10 @@ msgstr ""
 msgid "Added a new article to the reading list"
 msgstr ""
 
+#: ../event/instapaper-like.php:35
+msgid "Liked new article"
+msgstr ""
+
 #: ../event/iphone-photo.php:35
 msgid "Took a photo with the new iPhone 5"
 msgstr ""
