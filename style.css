@@ -14,12 +14,13 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+/*  Value
+  ---------------------------------------------*/
 /*  Import
   ---------------------------------------------*/
-.transition, .Event-header__time, .Event-body figure:after, .Event-body figure figcaption {
-  -webkit-transition: .23s;
-          transition: .23s; }
-
 /* normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -203,10 +204,14 @@ td,
 th {
   padding: 0; }
 
+/*  Value
+  ---------------------------------------------*/
+/*  Global
+  ---------------------------------------------*/
 html {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #333333;
   background: white;
@@ -265,12 +270,52 @@ ul {
 [tabindex="-1"]:focus {
   outline: none !important; }
 
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-weight: 700; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2; }
+
+img {
+  vertical-align: middle; }
+
+/*  Helper
+  ---------------------------------------------*/
+.Event-header__time, .Event-body figure:after, .Event-body figure figcaption {
+  -webkit-transition: .23s;
+          transition: .23s; }
+
+.light {
+  font-weight: 300; }
+
+.FlexEmbed {
+  position: relative;
+  overflow: hidden; }
+
+.FlexEmbed:before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+  width: 100%; }
+
+.FlexEmbed-item,
+.FlexEmbed img,
+.FlexEmbed iframe,
+.FlexEmbed embed,
+.FlexEmbed object {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
 .icon {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 100%; }
 
 .icon-svg {
@@ -279,7 +324,7 @@ ul {
   vertical-align: middle;
   width: 20px;
   height: 20px;
-  margin-top: 7px; }
+  margin-top: 6px; }
 
 .icon--facebook {
   background-color: #3b5998; }
@@ -416,49 +461,61 @@ ul {
   .icon--like .icon-svg {
     fill: #ea6895; }
 
-/*  Global
-  ---------------------------------------------*/
-* {
-  -webkit-tap-highlight-color: transparent; }
-
-img {
-  vertical-align: middle; }
-
-small {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300; }
-
-/*  Local
-  ---------------------------------------------*/
-.FlexEmbed {
-  position: relative;
-  overflow: hidden; }
-
-.FlexEmbed:before {
-  content: "";
-  display: block;
-  padding-bottom: 56.25%;
-  width: 100%; }
-
-.FlexEmbed-item,
-.FlexEmbed img,
-.FlexEmbed iframe,
-.FlexEmbed embed,
-.FlexEmbed object {
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
-
 /*  Time-line
   ---------------------------------------------*/
+.SiteHeader {
+  z-index: 1;
+  position: relative;
+  height: 500px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  background-image: url("img/cover.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover cover;
+          background-size: cover; }
+  .SiteHeader:after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(rgba(0, 0, 0, 0.6)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.6)); }
+  .SiteHeader .Content {
+    padding-left: 40px;
+    padding-right: 40px;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    bottom: 120px;
+    width: 100%;
+    max-width: 620px;
+    margin-left: -310px; }
+  .SiteHeader_avatar {
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; }
+  .SiteHeader_title {
+    font-size: 38px; }
+  .SiteHeader_last-update {
+    opacity: .6; }
+
+@media screen and (max-width: 44.28571em) {
+  .SiteHeader {
+    height: 100%; } }
 html, body {
   height: 100%; }
 
 .Page {
-  padding-top: 50px;
+  padding-top: 70px;
+  z-index: 2;
   position: relative;
   width: 100%;
   max-width: 620px;
@@ -466,20 +523,41 @@ html, body {
   margin-right: auto;
   padding-left: 40px;
   padding-right: 40px; }
-  .Page:before {
+
+.Pipe {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 4px;
+  height: 100%;
+  background-color: whitesmoke; }
+  .Pipe:before, .Pipe:after {
     content: '';
-    z-index: -1;
     position: absolute;
-    left: -2px;
+    top: -70px; }
+  .Pipe:before {
+    left: 0;
     width: 4px;
-    height: 100%;
-    background-color: whitesmoke; }
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.3); }
+  .Pipe:after {
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    margin-top: -6px;
+    background-color: #fff;
+    border-radius: 50%; }
+
+.Events {
+  z-index: 2;
+  position: relative; }
 
 .Event {
   margin-bottom: 70px; }
   .Event-header {
     position: relative;
-    font-size: 14px;
     color: #999; }
     .Event-header__icon {
       position: absolute;
@@ -487,7 +565,7 @@ html, body {
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%);
-      left: -101px;
+      left: -98px;
       font-size: 0; }
       .Event-header__icon .icon {
         -webkit-box-shadow: 0 0 0 6px white;
@@ -551,8 +629,16 @@ html, body {
         bottom: 0; }
 
 .twitter-tweet {
-  min-width: auto !important;
+  min-width: 100% !important;
   border-width: 0 !important;
   width: 100% !important;
-  max-width: auto !important;
-  margin: 0 0 0 -16px !important; }
+  max-width: inherit !important;
+  margin: 0 !important; }
+
+@media screen and (max-width: 44.28571em) {
+  .Page {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .twitter-tweet {
+    margin-left: 0 !important; } }
