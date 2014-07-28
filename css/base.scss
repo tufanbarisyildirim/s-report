@@ -1,18 +1,29 @@
+/*  Value
+  ---------------------------------------------*/
+
+$base-font-size: 14px;
+$base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-line-height: 1.4;
+//
+$light-font-weight: 300;
+$normal-font-weight: 400;
+$bold-font-weight: 700;
+//
 $base-background: #fff;
 $color-gray: #f5f5f5;
 $base-color: #333;
-$base-font-size: 16px;
-$base-font-weight: 400;
-$base-line-height: 1.4;
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//
 $base-link-color: #1899CC;
 $base-link-color-hover: $base-link-color;
+
+/*  Global
+  ---------------------------------------------*/
 
 html {
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-family: $base-font-family;
-  font-weight: $base-font-weight;
+  font-weight: $normal-font-weight;
   color: $base-color;
   background: $base-background;
 
@@ -79,4 +90,61 @@ ul {
 
 [tabindex="-1"]:focus {
   outline: none !important;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-weight: $bold-font-weight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/*  Helper
+  ---------------------------------------------*/
+
+%transition {
+  transition: .23s;
+}
+
+.light {
+  font-weight: $light-font-weight;
+}
+
+.FlexEmbed {
+  position: relative;
+  overflow: hidden;
+}
+
+.FlexEmbed:before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+  width: 100%;
+}
+
+.FlexEmbed-item,
+.FlexEmbed img,
+.FlexEmbed iframe,
+.FlexEmbed embed,
+.FlexEmbed object {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: pxToEm($width-Page + ($padding-Page * 2))) {
+
+  .FlexEmbed {
+    //margin-left: -$padding-Page-m;
+    //margin-right: -$padding-Page-m;
+  }
+
 }

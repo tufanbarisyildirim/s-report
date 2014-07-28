@@ -6,6 +6,6 @@
   background-image: -o-linear-gradient($from, $to);
 }
 
-.transition {
-  transition: .23s;
+@function pxToEm($size) {
+  @return $size / $base-font-size + em;
 }

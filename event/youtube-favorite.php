@@ -12,29 +12,32 @@
     ?>
 
 
-    <article class="Event <?php echo 'Event--' . $Domain; ?>">
+    <article class="Event <?php echo 'Event--' . $Domain; ?>" rel="bookmark">
 
         <header class="Event-header">
 
             <span class="Event-header__icon">
+
                 <i class="icon <?php echo 'icon--' . $Domain; ?>">
                     <svg class="icon-svg" viewBox="0 0 <?php echo $widthDomainIcon; ?> <?php echo $heightDomainIcon; ?>">
                         <use xlink:href="#icon--<?php echo $Domain; ?>"></use>
                     </svg>
                 </i>
-                <i class="icon <?php echo 'icon--' . $Action[0]; ?>">
+
+                <a href="<?php echo $Url ?>" target="_blank" class="icon <?php echo 'icon--' . $Action[0]; ?>">
                     <svg class="icon-svg" viewBox="0 0 <?php echo $widthActionIcon; ?> <?php echo $heightActionIcon; ?>">
                         <use xlink:href="#icon--<?php echo $Action[0]; ?>"></use>
                     </svg>
-                </i>
+                </a>
+
             </span>
 
-            <a class="Event-header__time" href="<?php echo $Url ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
-                <time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time>
+            <a class="Event-header__time" href="<?php echo the_permalink() ?>" title="<?php the_time('j F Y - G:i') ?>">
+                <time><?php printf(__('%s ago', 's-report'), human_time_diff(get_post_time('U'), current_time('timestamp'))); ?></time>
             </a>
 
             <p class="Event-header__text">
-                <?php printf( __( 'Faved <strong>%s</strong>\'s video', 's-report' ), $AuthorName); ?>
+                <?php printf(__('Faved <strong>%s</strong>\'s video', 's-report'), $AuthorName); ?>
             </p>
 
         </header>

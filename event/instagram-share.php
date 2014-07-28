@@ -20,20 +20,23 @@
             <header class="Event-header">
 
                 <span class="Event-header__icon">
-                    <i class="icon <?php echo 'icon--' . $Domain; ?>">
+
+                    <a href="" class="icon <?php echo 'icon--' . $Domain; ?>">
                         <svg class="icon-svg" viewBox="0 0 <?php echo $widthDomainIcon; ?> <?php echo $heightDomainIcon; ?>">
                             <use xlink:href="#icon--<?php echo $Domain; ?>"></use>
                         </svg>
-                    </i>
-                    <i class="icon <?php echo 'icon--' . $Action[0]; ?>">
+                    </a>
+
+                    <a href="" class="icon <?php echo 'icon--' . $Action[0]; ?>">
                         <svg class="icon-svg" viewBox="0 0 <?php echo $widthActionIcon; ?> <?php echo $heightActionIcon; ?>">
                             <use xlink:href="#icon--<?php echo $Action[0]; ?>"></use>
                         </svg>
-                    </i>
+                    </a>
+
                 </span>
 
                 <a class="Event-header__time" href="<?php echo $Url ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
-                    <time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time>
+                    <time><?php printf(__('%s ago', 's-report'), human_time_diff(get_post_time('U'), current_time('timestamp'))); ?></time>
                 </a>
 
                 <p class="Event-header__text">
@@ -86,7 +89,7 @@
                 </span>
 
                 <a class="Event-header__time" href="<?php echo $URL ?>" target="_blank" title="<?php the_time('j F Y - G:i') ?>">
-                    <time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time>
+                    <time><?php printf(__('%s ago', 's-report'), human_time_diff(get_post_time('U'), current_time('timestamp'))); ?></time>
                 </a>
 
                 <p class="Event-header__text">
