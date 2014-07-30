@@ -39,10 +39,10 @@
 
 <header class="SiteHeader">
     <div class="Content">
-        <img class="SiteHeader_avatar" src="<?php echo get_template_directory_uri(); ?>/img/avatar.png" alt="adem ilter"/>
+        <img class="SiteHeader_avatar" src="<?php echo s_report_get_theme_option('avatar_image', get_template_directory_uri().'/img/avatar.png') ?>" alt="<?php echo s_report_get_theme_option('avatar_alt', 'avatar') ?>"/>
 
-        <h1 class="SiteHeader_title">Adem ilter<span class="light">'s Timeline</span></h1>
+        <h1 class="SiteHeader_title"><?php bloginfo('name'); ?><span class="light"> <?php bloginfo('description'); ?></span></h1>
 
-        <p class="SiteHeader_last-update">Last update: <strong>23 min ago</strong></p>
+        <p class="SiteHeader_last-update"><?php _e('Last Update', 's-report'); ?>: <strong><time><?php printf( __( '%s ago', 's-report' ), human_time_diff(get_post_time('U'), current_time('timestamp')) ); ?></time></strong></p>
     </div>
 </header>

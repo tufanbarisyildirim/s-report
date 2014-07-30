@@ -26,7 +26,7 @@ msgstr ""
 #: ../event/iphone-photo.php:31 ../event/soundcloud-favorite.php:35
 #: ../event/tumblr-like.php:32 ../event/twitter-favorite.php:32
 #: ../event/twitter-tweet.php:33 ../event/vimeo-like.php:33
-#: ../event/youtube-favorite.php:33
+#: ../event/youtube-favorite.php:33 ../header.php:48
 #, php-format
 msgid "%s ago"
 msgstr ""
@@ -138,4 +138,48 @@ msgstr ""
 
 #: ../functions.php:57
 msgid "All post loaded!"
+msgstr ""
+
+#: ../functions.php:103
+msgid "Default"
+msgstr ""
+
+#: ../functions.php:129
+msgid "Site Favicon"
+msgstr ""
+
+#: ../functions.php:136
+msgid "Cover image"
+msgstr ""
+
+#: ../functions.php:146
+msgid "Header Image"
+msgstr ""
+
+#: ../functions.php:153
+msgid "Avatar photo"
+msgstr ""
+
+#: ../functions.php:163
+msgid "Avatar Photo"
+msgstr ""
+
+#: ../functions.php:174
+msgid "Alt Text (Name, Description, etc ...)"
+msgstr ""
+
+#: ../functions.php:181
+msgid "Custom Code"
+msgstr ""
+
+#: ../functions.php:191
+msgid "Header Code (Meta tags, CSS, etc ...)"
+msgstr ""
+
+#: ../functions.php:202
+msgid "Footer Code (Analytics, etc ...)"
+msgstr ""
+
+#: ../header.php:48
+msgid "Last Update"
 msgstr ""
