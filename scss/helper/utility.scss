@@ -1,0 +1,26 @@
+// Flex embed
+
+.flex-embed {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+    width: 100%;
+  }
+
+  &-item,
+  img,
+  iframe,
+  embed,
+  object {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
