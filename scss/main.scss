@@ -1,0 +1,45 @@
+/*!
+	Theme Name: s-Report
+	Theme URI: https://github.com/ademilter/s-report
+	Description: Social-report is a beautiful social-feed theme for WordPress that works with ifttt recipes.
+	Author: @ademilter
+	Author URI: https://github.com/ademilter
+	Version: 1.0.19
+	License: The MIT License (MIT)
+	License URI: https://github.com/ademilter/s-report/blob/master/License
+	Tags: deneme
+*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*  Value
+  ---------------------------------------------*/
+
+$padding-Page-m: 20px;
+//
+$width-Page: 540px !default;
+$padding-Page: 40px !default;
+$width-Page-border: 4px;
+//
+$top-Pipe: 70px !default;
+$size-Pipe-dot: 12px;
+
+/*  Import
+  ---------------------------------------------*/
+
+@import "mixin";
+@import "normalize";
+@import "base";
+@import "icon";
+
+/*  Time-line
+  ---------------------------------------------*/
+
+@import "header";
+@import "timeline";

@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'theme/style.css': 'css/main.scss'
+                    'style.css': 'scss/main.scss'
                 }
             }
         },
@@ -18,8 +18,8 @@ module.exports = function (grunt) {
 
         autoprefixer: {
             css: {
-                src: 'theme/style.css',
-                dest: 'theme/style.css'
+                src: 'style.css',
+                dest: 'style.css'
             }
         },
 
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         cssmin: {
             css: {
                 files: {
-                    'theme/style.css': 'theme/style.css'
+                    'style.css': 'style.css'
                 }
             }
         },
@@ -36,11 +36,11 @@ module.exports = function (grunt) {
         concat: {
             plugin: {
                 src: ['js/plugin/**/*.js'],
-                dest: 'theme/js/plugin.js'
+                dest: 'js/plugin.min.js'
             },
             main: {
                 src: ['js/main.js'],
-                dest: 'theme/js/main.js'
+                dest: 'js/main.min.js'
             }
         },
 
@@ -48,12 +48,12 @@ module.exports = function (grunt) {
         uglify: {
             plugin: {
                 files: {
-                    'theme/js/plugin.min.js': 'theme/js/plugin.js'
+                    'js/plugin.min.js': 'js/plugin.min.js'
                 }
             },
             main: {
                 files: {
-                    'theme/js/main.min.js': 'theme/js/main.js'
+                    'js/main.min.js': 'js/main.min.js'
                 }
             }
         },
@@ -73,11 +73,11 @@ module.exports = function (grunt) {
                 tasks: ['concat:plugin']
             },
             jsMain: {
-                files: ['js/main.js'],
+                files: ['js/main/**/*.js'],
                 tasks: ['concat:main']
             },
             html: {
-                files: ['template/**/*.html', 'template/**/*.php'],
+                files: ['**/*.php'],
                 tasks: []
             }
         }
