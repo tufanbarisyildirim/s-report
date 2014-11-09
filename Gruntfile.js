@@ -5,46 +5,29 @@ module.exports = function (grunt) {
 
 
         sass: {
-            home: {
+            css: {
                 options: {
                     sourcemap: 'none'
                 },
                 files: {
-                    'www/css/home.css': 'css/home.scss'
-                }
-            },
-            login: {
-                options: {
-                    sourcemap: 'none'
-                },
-                files: {
-                    'www/css/login.css': 'css/login.scss'
+                    'theme/style.css': 'css/main.scss'
                 }
             }
         },
 
 
         autoprefixer: {
-            home: {
-                src: 'www/css/home.css',
-                dest: 'www/css/home.min.css'
-            },
-            login: {
-                src: 'www/css/login.css',
-                dest: 'www/css/login.min.css'
+            css: {
+                src: 'theme/style.css',
+                dest: 'theme/style.css'
             }
         },
 
 
         cssmin: {
-            home: {
+            css: {
                 files: {
-                    'www/css/home.min.css': 'www/css/home.min.css'
-                }
-            },
-            login: {
-                files: {
-                    'www/css/login.min.css': 'www/css/login.min.css'
+                    'theme/style.css': 'theme/style.css'
                 }
             }
         },
@@ -53,19 +36,11 @@ module.exports = function (grunt) {
         concat: {
             plugin: {
                 src: ['js/plugin/**/*.js'],
-                dest: 'www/js/plugin.min.js'
+                dest: 'theme/js/plugin.js'
             },
-            pluginHome: {
-                src: ['js/plugin/global/**/*.js'],
-                dest: 'www/js/plugin-home.min.js'
-            },
-            home: {
-                src: ['js/global/**/*.js', 'js/home/**/*.js'],
-                dest: 'www/js/home.min.js'
-            },
-            login: {
-                src: ['js/global/**/*.js', 'js/login/**/*.js'],
-                dest: 'www/js/login.min.js'
+            main: {
+                src: ['js/main.js'],
+                dest: 'theme/js/main.js'
             }
         },
 
@@ -73,22 +48,12 @@ module.exports = function (grunt) {
         uglify: {
             plugin: {
                 files: {
-                    'www/js/plugin.min.js': 'www/js/plugin.min.js'
+                    'theme/js/plugin.min.js': 'theme/js/plugin.js'
                 }
             },
-            pluginHome: {
+            main: {
                 files: {
-                    'www/js/plugin-home.min.js': 'www/js/plugin-home.min.js'
-                }
-            },
-            home: {
-                files: {
-                    'www/js/home.min.js': 'www/js/home.min.js'
-                }
-            },
-            login: {
-                files: {
-                    'www/js/login.min.js': 'www/js/login.min.js'
+                    'theme/js/main.min.js': 'theme/js/main.js'
                 }
             }
         },
@@ -99,37 +64,17 @@ module.exports = function (grunt) {
                 spawn: false,
                 livereload: true
             },
+            css: {
+                files: ['css/**/*.scss'],
+                tasks: ['sass', 'autoprefixer']
+            },
             jsPlugin: {
                 files: ['js/plugin/**/*.js'],
                 tasks: ['concat:plugin']
             },
-            jsPluginHome: {
-                files: ['js/plugin/global/**/*.js'],
-                tasks: ['concat:pluginHome']
-            },
-            jsGlobal: {
-                files: ['js/global/**/*.js'],
-                tasks: ['concat:home', 'concat:login']
-            },
-            jsHome: {
-                files: ['js/home/**/*.js'],
-                tasks: ['concat:home']
-            },
-            jsLogin: {
-                files: ['js/login/**/*.js'],
-                tasks: ['concat:login']
-            },
-            cssHelper: {
-                files: ['css/helper/**/*.scss'],
-                tasks: ['sass', 'autoprefixer']
-            },
-            cssHome: {
-                files: ['css/home.scss', 'css/home/**/*.scss'],
-                tasks: ['sass:home', 'autoprefixer:home']
-            },
-            cssLogin: {
-                files: ['css/login.scss', 'css/login/**/*.scss'],
-                tasks: ['sass:login', 'autoprefixer:login']
+            jsMain: {
+                files: ['js/main.js'],
+                tasks: ['concat:main']
             },
             html: {
                 files: ['template/**/*.html', 'template/**/*.php'],
