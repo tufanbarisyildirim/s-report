@@ -31,7 +31,9 @@
 <header class="SiteHeader">
     <div class="Width">
 
+
         <div class="HeaderContent">
+
 
             <div class="line">
                 <div class="dot"></div>
@@ -47,7 +49,9 @@
                 <time><?php printf(__('%s ago', 's-report'), human_time_diff(get_post_time('U'), current_time('timestamp'))); ?></time>
             </div>
 
+
         </div>
+
 
     </div>
 </header>
