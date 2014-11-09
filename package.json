@@ -1,0 +1,27 @@
+{
+    "name": "ugoo",
+    "description": "web chat",
+    "author": "ademilter",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ademilter/ugoo.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ademilter/ugoo/issues"
+    },
+    "homepage": "https://github.com/ademilter/ugoo",
+    "devDependencies": {
+        "grunt": "~0.4.2",
+        "grunt-autoprefixer": "^1.0.1",
+        "grunt-contrib-concat": "^0.5.0",
+        "grunt-contrib-cssmin": "^0.10.0",
+        "grunt-contrib-sass": "^0.8.1",
+        "grunt-contrib-uglify": "^0.6.0",
+        "grunt-contrib-watch": "^0.6.1",
+        "load-grunt-tasks": "^0.2.1"
+    },
+    "dependencies": {
+        "load-grunt-tasks": "~0.2.0"
+    }
+}
