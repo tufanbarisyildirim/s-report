@@ -1,6 +1,23 @@
+.Width {
+  position: relative;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 20px 0 70px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 70 - ($border-width / 2);
+    top: 0;
+    width: $border-width;
+    height: 100%;
+    background-color: rgba(black, .1);
+  }
+}
+
 // Flex embed
 
-.flex-embed {
+.Flex-embed {
   position: relative;
   overflow: hidden;
 

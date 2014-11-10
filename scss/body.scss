@@ -1,0 +1,19 @@
+.SiteBody {
+  padding-top: 440px;
+  height: 1400px;
+}
+
+.list {
+  padding-left: $container-offset;
+  padding-top: 50px;
+
+  .asd {
+    position: relative;
+    //    padding-left: 20px;
+
+    & + .asd {
+      margin-top: 30px;
+    }
+
+  }
+}

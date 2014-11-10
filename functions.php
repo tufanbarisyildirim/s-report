@@ -44,7 +44,9 @@ function tokenText($str)
 
 function plugin_scripts()
 {
-    wp_enqueue_script('plugin-js', get_stylesheet_directory_uri() . '/js/plugin.min.js', array('jquery'));
+    wp_enqueue_style( 'style-css', get_stylesheet_uri() );
+    wp_enqueue_script('plugin-js', get_template_directory_uri() . '/js/plugin.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.min.js', array(), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'plugin_scripts');

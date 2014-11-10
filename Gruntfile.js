@@ -39,7 +39,7 @@ module.exports = function (grunt) {
                 dest: 'js/plugin.min.js'
             },
             main: {
-                src: ['js/main.js'],
+                src: ['js/main/main.js'],
                 dest: 'js/main.min.js'
             }
         },
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
                 livereload: true
             },
             css: {
-                files: ['css/**/*.scss'],
+                files: ['scss/**/*.scss'],
                 tasks: ['sass', 'autoprefixer']
             },
             jsPlugin: {

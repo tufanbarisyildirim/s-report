@@ -13,9 +13,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css"/>
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
     <?php wp_head(); ?>
 
     <?php include_once("analyticstracking.php"); ?>
@@ -29,29 +29,36 @@
 
 
 <header class="SiteHeader">
-    <div class="Width">
-
-
-        <div class="HeaderContent">
-
-
-            <div class="line">
-                <div class="dot"></div>
-            </div>
+    <div class="SiteHeader-container">
+        <div class="Width">
 
 
             <div class="site-info">
-                <img class="site-info_photo" src="<?php echo s_report_get_theme_option('avatar_image', get_template_directory_uri() . '/img/avatar.png') ?>"
-                     alt="<?php echo s_report_get_theme_option('avatar_alt', 'avatar') ?>"/>
 
-                <h1 class=" site-info_name"><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></h1>
-                <?php _e('Last Update', 's-report'); ?>:
-                <time><?php printf(__('%s ago', 's-report'), human_time_diff(get_post_time('U'), current_time('timestamp'))); ?></time>
+
+                <div class="site-info-title">
+                    <img class="site-info-title_photo" src="<?php echo s_report_get_theme_option('avatar_image', get_template_directory_uri() . '/img/avatar.png') ?>"
+                         alt="<?php echo s_report_get_theme_option('avatar_alt', 'avatar') ?>"/>
+
+                    <h1 class="site-info-title_name"><?php bloginfo('name'); ?> <?php //bloginfo('description'); ?></h1>
+                </div>
+
+
+                <div class="site-info-filter">
+                    <p class="site-info-filter_sort">2345 Event, from 15 Channels</p>
+
+                    <p class="site-info-filter_update">
+                        <?php _e('Last Update', 's-report'); ?>:
+                        <time><?php printf(__('%s ago', 's-report'), human_time_diff(get_post_time('U'), current_time('timestamp'))); ?></time>
+                    </p>
+
+                </div>
+
+
             </div>
 
 
         </div>
-
-
     </div>
 </header>
+

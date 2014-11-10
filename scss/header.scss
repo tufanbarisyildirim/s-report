@@ -1,0 +1,99 @@
+.SiteHeader {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 440px;
+  color: #fff;
+  background: url('https://farm4.staticflickr.com/3883/14437980025_1bc51e291f_h.jpg') center no-repeat;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include gradient(linear, top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.60), 'left top, left bottom');
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#000000', EndColorStr='#000000');
+  }
+
+  &-container {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .Width {
+      min-height: 100%;
+      padding-bottom: 30px;
+
+      &:before {
+        top: $photo-width / 2;
+        background-color: rgba(white, .2);
+      }
+    }
+
+  }
+
+}
+
+.site-info {
+  z-index: 1;
+  position: relative;
+
+  &-title {
+    position: relative;
+    padding-left: $container-offset;
+
+    &_photo {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -($photo-width / 2);
+      width: $photo-width;
+      border-radius: 50%;
+      box-shadow: 0 1px 2px rgba(black, .3);
+    }
+
+    &_name {
+      font-size: 26px;
+      text-shadow: 0 1px 2px rgba(black, .3);
+    }
+  }
+
+  &-filter {
+    margin-top: 30px;
+    padding-left: $container-offset;
+
+    &_sort {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -$container-offset;
+        margin-left: -4px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: rgba(white, 1);
+        border-radius: 50%;
+      }
+
+    }
+
+    &_update {
+      margin-top: 4px;
+      font-size: 13px;
+      font-family: Georgia;
+      font-style: italic;
+      color: rgba(white, .6);
+    }
+  }
+
+}
