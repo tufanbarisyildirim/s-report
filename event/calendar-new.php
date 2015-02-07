@@ -36,7 +36,7 @@
             </a>
 
             <p class="Event-header__text">
-                <?php printf( __( 'Added event', 's-report' ), ); ?>
+                <?php  __( 'Added event', 's-report' ); ?>
             </p>
 
         </header>
